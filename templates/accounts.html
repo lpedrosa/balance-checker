@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>Your accounts</title>
+    </head>
+    <body>
+        <h1>Your accounts</h1>
+        <ul>
+            {% for acc_id, acc in accounts.items() %}
+            <li id="{{acc_id}}">Account: {{acc.name}} Balance: {{acc.balance.currency}} {{acc.balance.value}}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
